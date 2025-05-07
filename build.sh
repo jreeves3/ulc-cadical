@@ -1,0 +1,1 @@
+(cd cadical; ./configure && make)
