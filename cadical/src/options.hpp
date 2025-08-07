@@ -113,16 +113,6 @@ OPTION( lrat,              0,  0,  1,0,0,1, "use LRAT proof format") \
 OPTION( lucky,             1,  0,  1,0,0,1, "search for lucky phases") \
 OPTION( minimize,          1,  0,  1,0,0,1, "minimize learned clauses") \
 OPTION( minimizedepth,   1e3,  0,1e3,0,0,1, "minimization depth") \
-OPTION( orderencode,              0,  0,  1,0,0,0, "perform order encoding in preprocessing") \
-OPTION( orderencodealign,              1,  0,  1,0,0,0, "align variables inside clauses") \
-OPTION( orderencodealigntype,              0,  0,  2,0,0,0, "0: alignable and independent and unalignable; 1: only alignable; 1: alignable and independent") \
-OPTION( orderencodecut,              4,  0,  1e6,0,0,0, "cutoff for clause size to reencode") \
-OPTION( orderencodeelim,              0,  0,  1,0,0,0, " perform variable elimination after adding sequential counter") \
-OPTION( orderencodeexit,              0,  0,  1,0,0,0, "exit after order encoding") \
-OPTION( orderencodekeep,              1,  0,  1,0,0,0, "keep binary clauses o1->02,..., only important if elim is enabled") \
-OPTION( orderencoderes,              1,  0,  1,0,0,0, "perform resolutions before order encoding") \
-OPTION( orderencodeshuff,              0,  0,  1,0,0,0, "shuffle literals in ULC before encoding") \
-OPTION( orderencodetype,              1,  1,  3,0,0,0, "Type of order encoding. 1: ulc, 2: pairwise, 3: hybrid") \
 OPTION( otfs,              1,  0,  1,0,0,1, "on-the-fly self subsumption") \
 OPTION( phase,             1,  0,  1,0,0,1, "initial phase") \
 OPTION( probe,             1,  0,  1,0,1,1, "failed literal probing" ) \
@@ -193,6 +183,16 @@ OPTION( transred,          1,  0,  1,0,1,1, "transitive reduction of BIG") \
 OPTION( transredmaxeff,  1e8,  0,2e9,1,0,1, "maximum efficiency") \
 OPTION( transredmineff,  1e6,  0,2e9,1,0,1, "minimum efficiency") \
 OPTION( transredreleff,  1e2,  1,1e5,1,0,1, "relative efficiency per mille") \
+OPTION( ulc,              0,  0,  1,0,0,0, "perform ulc encoding in preprocessing") \
+OPTION( ulcalign,              1,  0,  1,0,0,0, "align variables inside clauses") \
+OPTION( ulcaligntype,              0,  0,  2,0,0,0, "0: alignable and independent and unalignable; 1: only alignable; 2: alignable and independent") \
+OPTION( ulccut,              4,  0,  1e6,0,0,0, "cutoff for clause size to reencode") \
+OPTION( ulcelim,              0,  0,  1,0,0,0, " perform variable elimination after adding sequential counter") \
+OPTION( ulcexit,              0,  0,  1,0,0,0, "exit after ulc encoding") \
+OPTION( ulckeep,              1,  0,  1,0,0,0, "keep binary clauses o1->02,..., only important if elim is enabled") \
+OPTION( ulcres,              1,  0,  1,0,0,0, "perform resolutions before ulc encoding") \
+OPTION( ulcshuff,              0,  0,  1,0,0,0, "shuffle literals in ULC before encoding") \
+OPTION( ulctype,              1,  1,  3,0,0,0, "Type of ulc encoding. 1: ulc, 2: pairwise, 3: hybrid") \
 QUTOPT( verbose,           0,  0,  3,0,0,0, "more verbose messages") \
 OPTION( veripb,            0,  0,  4,0,0,1, "odd=checkdeletions, > 2=drat") \
 OPTION( vivify,            1,  0,  1,0,1,1, "vivification") \

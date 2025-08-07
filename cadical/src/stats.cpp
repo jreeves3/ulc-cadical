@@ -58,53 +58,53 @@ void Stats::print (Internal *internal) {
 
   SECTION ("statistics");
 
-  // stats for order encoding steps
-  if (internal->opts.orderencode) {
-    MSG ("order res cnt:     %15" PRId64 "", stats.order.nres);
-    MSG ("order res units:   %15" PRId64 "", stats.order.unitsres);
-    MSG ("order res tauts:   %15" PRId64 "", stats.order.tautres);
-    MSG ("order res old:     %15" PRId64 "", stats.order.res_old);
-    MSG ("order res new:     %15" PRId64 "", stats.order.res_new);
-    MSG ("order res for:     %15" PRId64 "", stats.order.forced_res);
-    MSG ("order res clash:   %15" PRId64 "", stats.order.clashElim);
-    MSG ("order res nonXlc:  %15" PRId64 "", stats.order.nNonXlcRes);
+  // stats for ulc reencoding steps
+  if (internal->opts.ulc) {
+    MSG ("ulc res cnt:     %15" PRId64 "", stats.order.nres);
+    MSG ("ulc res units:   %15" PRId64 "", stats.order.unitsres);
+    MSG ("ulc res tauts:   %15" PRId64 "", stats.order.tautres);
+    MSG ("ulc res old:     %15" PRId64 "", stats.order.res_old);
+    MSG ("ulc res new:     %15" PRId64 "", stats.order.res_new);
+    MSG ("ulc res for:     %15" PRId64 "", stats.order.forced_res);
+    MSG ("ulc res clash:   %15" PRId64 "", stats.order.clashElim);
+    MSG ("ulc res nonXlc:  %15" PRId64 "", stats.order.nNonXlcRes);
 
-    MSG ("order enc prebin:  %15" PRId64 "", stats.order.pre_bin);
-    MSG ("order enc prebinb: %15" PRId64 "", stats.order.pre_bin_below);
-    MSG ("order enc prehyb:  %15" PRId64 "", stats.order.pre_hyb);
-    MSG ("order enc prehybb: %15" PRId64 "", stats.order.pre_hyb_below);
-    MSG ("order enc prehybf: %15" PRId64 "", stats.order.pre_hybf);
-    MSG ("order enc prehybbf:%15" PRId64 "", stats.order.pre_hybf_below);
+    MSG ("ulc enc prebin:  %15" PRId64 "", stats.order.pre_bin);
+    MSG ("ulc enc prebinb: %15" PRId64 "", stats.order.pre_bin_below);
+    MSG ("ulc enc prehyb:  %15" PRId64 "", stats.order.pre_hyb);
+    MSG ("ulc enc prehybb: %15" PRId64 "", stats.order.pre_hyb_below);
+    MSG ("ulc enc prehybf: %15" PRId64 "", stats.order.pre_hybf);
+    MSG ("ulc enc prehybbf:%15" PRId64 "", stats.order.pre_hybf_below);
     
-    MSG ("order enc preboth: %15" PRId64 "", stats.order.pre_both);
-    MSG ("order enc prebothb:%15" PRId64 "", stats.order.pre_both_below);
+    MSG ("ulc enc preboth: %15" PRId64 "", stats.order.pre_both);
+    MSG ("ulc enc prebothb:%15" PRId64 "", stats.order.pre_both_below);
 
-    MSG ("order enc preulcb: %15" PRId64 "", stats.order.pre_ulcs_below);
-    MSG ("order enc preulc:  %15" PRId64 "", stats.order.pre_ulcs);
-    MSG ("order enc ulcb:    %15" PRId64 "", stats.order.ulc_below);
-    MSG ("order enc binb:    %15" PRId64 "", stats.order.bin_below);
-    MSG ("order enc hybb:    %15" PRId64 "", stats.order.hyb_below);
-    MSG ("order enc hybfb:   %15" PRId64 "", stats.order.hybf_below);
-    MSG ("order enc bothb:   %15" PRId64 "", stats.order.both_below);
+    MSG ("ulc enc preulcb: %15" PRId64 "", stats.order.pre_ulcs_below);
+    MSG ("ulc enc preulc:  %15" PRId64 "", stats.order.pre_ulcs);
+    MSG ("ulc enc ulcb:    %15" PRId64 "", stats.order.ulc_below);
+    MSG ("ulc enc binb:    %15" PRId64 "", stats.order.bin_below);
+    MSG ("ulc enc hybb:    %15" PRId64 "", stats.order.hyb_below);
+    MSG ("ulc enc hybfb:   %15" PRId64 "", stats.order.hybf_below);
+    MSG ("ulc enc bothb:   %15" PRId64 "", stats.order.both_below);
 
-    MSG ("order enc ulcVars: %15" PRId64 "", stats.order.nvars_ulc);
-    MSG ("order enc binVars: %15" PRId64 "", stats.order.nvars_bin);
-    MSG ("order enc ulc:     %15" PRId64 "", stats.order.nulc);
-    MSG ("order enc bin:     %15" PRId64 "", stats.order.nbin);
-    MSG ("order enc hyb:     %15" PRId64 "", stats.order.nhyb);
-    MSG ("order enc hybf:    %15" PRId64 "", stats.order.nhybf);
-    MSG ("order enc both:    %15" PRId64 "", stats.order.nboth);
+    MSG ("ulc enc ulcVars: %15" PRId64 "", stats.order.nvars_ulc);
+    MSG ("ulc enc binVars: %15" PRId64 "", stats.order.nvars_bin);
+    MSG ("ulc enc ulc:     %15" PRId64 "", stats.order.nulc);
+    MSG ("ulc enc bin:     %15" PRId64 "", stats.order.nbin);
+    MSG ("ulc enc hyb:     %15" PRId64 "", stats.order.nhyb);
+    MSG ("ulc enc hybf:    %15" PRId64 "", stats.order.nhybf);
+    MSG ("ulc enc both:    %15" PRId64 "", stats.order.nboth);
 
-    MSG ("order enc elims:   %15" PRId64 "", stats.order.nvars_elim);
-    MSG ("order enc newvars: %15" PRId64 "", stats.order.new_vars);
+    MSG ("ulc enc elims:   %15" PRId64 "", stats.order.nvars_elim);
+    MSG ("ulc enc newvars: %15" PRId64 "", stats.order.new_vars);
 
-    MSG ("order enc found:   %15" PRId64 "", stats.order.foundorder);
-    // MSG ("order enc vars:  %15" PRId64 "", stats.order.nvars);
-    MSG ("order enc tauts:   %15" PRId64 "", stats.order.tautorder);
-    MSG ("order enc subs:    %15" PRId64 "", stats.order.suborder);
-    MSG ("order enc binsubs: %15" PRId64 "", stats.order.nbin_subs);
-    MSG ("order enc maxSize: %15" PRId64 "", stats.order.max_size_reenc_clause);
-    MSG ("order enc align:   %15" PRId64 "", stats.order.ulc_alignment);
+    MSG ("ulc enc found:   %15" PRId64 "", stats.order.foundorder);
+    // MSG ("ulc enc vars:  %15" PRId64 "", stats.order.nvars);
+    MSG ("ulc enc tauts:   %15" PRId64 "", stats.order.tautorder);
+    MSG ("ulc enc subs:    %15" PRId64 "", stats.order.suborder);
+    MSG ("ulc enc binsubs: %15" PRId64 "", stats.order.nbin_subs);
+    MSG ("ulc enc maxSize: %15" PRId64 "", stats.order.max_size_reenc_clause);
+    MSG ("ulc enc align:   %15" PRId64 "", stats.order.ulc_alignment);
 
 
 

@@ -10,18 +10,18 @@ Build Cadical
 
 Run Cadical with sequential counter encoding of ULCs with alignment on alignable formulas
 
-  > ./build/cadical <form> proof --no-binary --orderencode=1 --orderencodetype=1 --orderencodealigntype=1 --orderencodealign=1 --orderencodeelim=0 -t <timeout> 
+  > ./build/cadical <form> proof --no-binary --ulc=1 --ulctype=1 --ulcaligntype=1 --ulcalign=1 --ulcelim=0 -t <timeout> 
 
 Releveant options: 
 
---orderencode=[0,1]      : 1 to perform order encoding
+--ulc=[0,1]      : 1 to perform reencoding of ulcs in preprocessing
 
---orderencodealign=[0,1] : 0 for no alignment
+--ulcalign=[0,1] : 0 for no alignment
 
---orderencodeelim=[0,1]  : 1 for variable elimination, transforming sequential counter to order encoding 
+--ulcelim=[0,1]  : 1 for variable elimination, transforming sequential counter to order encoding 
 
---orderencodeexit=[0,1]  : 1 to exit solver after preprocessing
+--ulcexit=[0,1]  : 1 to exit solver after preprocessing
 
---orderencodetype=[1,3]  : 1 for ULC detection, 3 for full XLC detection
+--ulctype=[1,3]  : 1 for ULC detection, 3 for full XLC detection
 
---orderencodealigntype=[0,1,2] : 0 encode no matter alignment, 1 only encode alignable formula (skip preprocessing otherwise), 2 only encode alignable and independent formula
+--ulcaligntype=[0,1,2] : 0 encode no matter alignment, 1 only encode alignable formula (skip preprocessing otherwise), 2 only encode alignable and independent formula

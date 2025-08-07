@@ -251,9 +251,9 @@ int Internal::cdcl_loop_with_inprocessing () {
 
   START (search);
 
-  // run order encode as pure preprocessing
-  if (opts.orderencode) {
-    order_encode ();
+  // run ulc reencoding as pure preprocessing
+  if (opts.ulc) {
+    ulc_encode ();
   }
 
   if (stable) {

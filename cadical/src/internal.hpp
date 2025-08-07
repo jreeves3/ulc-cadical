@@ -312,8 +312,8 @@ struct Internal {
 
 
   void mark_garbage_order (Clause *, bool);
-  void order_encode ();
-  bool order_encoding ();
+  void ulc_encode ();
+  bool ulc_encoding ();
   void add_linear_encoding (vector<int> lits, vector<Clause *> &clauses, Clause *c);
   void add_pairwise_encoding (vector<int> lits, vector<set<int>> &bin_edges, vector<set<Clause*>> &bin_cls, Clause *c);
   void delete_linear_encoding ( vector<Clause *> &clauses, int old_max_var);
